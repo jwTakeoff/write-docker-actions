@@ -13,3 +13,10 @@ jobs:
         with:
           firstGreeting: "Learning Lab User"
           secondGreeting: "Mona the Octocat"
+      
+      - name: create-issue
+        uses: ./.github/actions/issue-maker
+        with:
+          repoToken: ${{secrets.GITHUB_TOKEN}}
+          catFact: "The thing is broken"
+          issueTitle: "a cat fact for you"
