@@ -2,7 +2,7 @@ name: "Docker Actions"
 
 on:
   pull_request:
-    types: [closed]
+    types: [labeled]
 
 jobs:
   action:
@@ -15,3 +15,6 @@ jobs:
         with:
           firstGreeting: "Learning Lab User"
           secondGreeting: "Mona the Octocat"
+      
+      - name: meow
+        uses: ./.github/actions/cat-facts
